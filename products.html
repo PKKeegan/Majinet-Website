@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+.top-panel img {
+            width: 8vw;
+            height: auto;
+        }
+
+       .top-panel {
+            background-color: white;
+            padding: 1.5%;
+            display: flex;
+            justify-content: space-left;
+            align-items: left;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 1.5%;
+            align-items: center; /* Align the navigation links vertically centered */
+        }
+
+        nav ul li {
+            margin-right: 2%;
+            position: relative;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            padding: 0.5vw 1vw;
+            font-size: 1.6vw; /* Adjusted font size */
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 1.2% 1.6%;
+            display: block;
+            text-decoration: none;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .button {
+            background-color: white; /* Changed background color to white */
+            border: 2px solid #ff0000; /* Adjusted border thickness */
+        }
+
+        .button a {
+            color: #ff0000;
+            text-decoration: none;
+            border-radius: 0;
+            display: block;
+            white-space: nowrap;
+            font-size: 1.6vw; /* Adjusted font size */
+        }
+
+        .button a:hover {
+            background-color: #cc0000;
+            color: #fff;
+        }
+
+
+footer {
+            background-color: #172645;
+            color: #fff;
+            padding: 2%;
+            text-align: center;
+            font-size: 1.4vw;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1vw;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+.footer-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2%;
+        }
+
+        .footer-column {
+            flex: 1;
+            text-align: left;
+            padding: 0 2%;
+        }
+
+        .footer-column h5 {
+            color: #fff;
+            font-size: 1.8vw;
+            margin-bottom: 1.5%;
+            border-bottom: 1px solid #fff;
+            padding-bottom: 1.5%;
+        }
+
+        .footer-column a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            margin: 1.5% 0;
+        }
+
+        .footer-column a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-column p {
+            color: #fff;
+            font-size: 1.4vw;
+            margin: 2% 0;
+        }
+
+        .footer-column.location {
+            font-size: 1.4vw;
+        }
+
+        .footer-logo {
+            flex: 1;
+            text-align: center;
+        }
+
+        .footer-logo img {
+            width: 12vw;
+            height: auto;
+        }
+
+
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: white center/cover fixed no-repeat; /* Replace 'background.jpg' with your image URL */
+        }
+
+
+
+        .company-logo {
+            max-width: 8vw;
+            height: auto;
+            margin-right: 2vw;
+        }
+
+        .page-title {
+            display: inline-block;
+            color: #000; /* Black text color */
+        }
+
+        .container {
+            width: 95%;
+            max-width: 1200px; /* Adjust as needed */
+            margin: 0 auto;
+            padding: 2vh;
+            box-sizing: border-box;
+        }
+
+        .page-paragraph {
+            text-align: center;
+            margin-bottom: 4vh;
+            color: #000; /* Black text color */
+        }
+
+        .product-title-panel {
+            background-color: #2c3e50; /* Midnight blue background for product title panel */
+            color: #fff; /* White text color */
+            padding: 1vh;
+            margin-bottom: 2vh;
+            text-align: center;
+            font-size: 2.5vh;
+        }
+
+        .product-cards {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .product-card {
+            width: calc(30% - 2vw);
+            border-radius: 1vh;
+            box-shadow: 0 0 1vh rgba(0, 0, 0, 0.1);
+            margin-bottom: 2vh;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-card img {
+            width: 20vw;
+            height: 20vw;
+            border-radius: 1vh 1vh 0 0;
+        }
+
+        .product-info {
+            padding: 2vh;
+        }
+
+        .product-info h3 {
+            margin: 0;
+            color: #000; /* Black text color */
+            font-size: 2vh;
+        }
+
+        .product-info p {
+            color: #555; /* Medium dark text color */
+            font-size: 1.5vh;
+        }
+
+        .product-cards a:nth-child(n+4) {
+            width: calc(45% - 2.5vw);
+        }
+
+        .product-cards a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-panel">
+        <a href="index.html"><img src="images/majinet logo.png" alt="Logo"></a>
+        <nav style="margin-left:7%">
+            <ul>
+                <li style="font-size: 1.6vw;"><a href="products.html">Products</a></li>
+                <li style="font-size: 1.6vw;"><a href="Solutions.html">Solutions</a></li>
+                <li style="font-size: 1.6vw;"><a href="partners.html">Partners</a></li>
+                <li style="font-size: 1.6vw;white-space: nowrap;"><a href="case study.html">Case Study</a></li>
+                <li style="font-size: 1.6vw;"><a href="about.html">About</a></li>
+                <li style="font-size: 1.6vw;"><a href="contact.html">Contact</a></li>
+                <li class="button"><a href="portal.html">Majinet System Portal</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="product-title-panel">
+            <h2>Featured Products</h2>
+        </div>
+
+        <div class="product-cards">
+            <!-- Product Card 1 -->
+            <a href="shengda ultrasonic.html" target="_blank" class="product-card">
+                <img src="images/shengda white.png" alt="Shengda Ultrasonic Water Meter">
+                <div class="product-info">
+                    <h3>Shengda Ultrasonic Water Meter</h3>
+                    <p>Description of Shengda Ultrasonic Water Meter.</p>
+                </div>
+            </a>
+
+            <!-- Product Card 2 -->
+            <a href="beco x.html" target="_blank" class="product-card">
+                <img src="images/Beco X.png" alt="BECO X Ultrasonic Water Meter">
+                <div class="product-info">
+                    <h3>BECO X Ultrasonic Water Meter</h3>
+                    <p>Description of BECO X Ultrasonic Water Meter.</p>
+                </div>
+            </a>
+
+            <!-- Product Card 3 -->
+            <a href="beco y.html" target="_blank"class="product-card">
+                <img src="images/Beco Ultrasonnic .png" alt="BECO Y Ultrasonic Water Meter">
+                <div class="product-info">
+                    <h3>BECO Y Ultrasonic Water Meter</h3>
+                    <p>Description of BECO Y Ultrasonic Water Meter.</p>
+                </div>
+            </a>
+
+            <!-- Product Card 4 -->
+            <a href="b 39 vw.html" target="_blank" class="product-card">
+                <img src="images/B 39.png" alt="B39 VW-M bulk Ultrasonic Water Meter">
+                <div class="product-info">
+                    <h3>B39 VW-M bulk Ultrasonic Water Meter</h3>
+                    <p>Description of B39 VW-M bulk Ultrasonic Water Meter.</p>
+                </div>
+            </a>
+
+            <!-- Product Card 5 -->
+            <a href="b 95 vpw.html" target="_blank"class="product-card">
+                <img src="images/b 95.png" height="20vw !important" alt="B95 VPW Valve Control _ Prepaid Ultrasonic Water Meter">
+                <div class="product-info">
+                    <h3>B95 VPW Valve Control _ Prepaid Ultrasonic Water Meter</h3>
+                    <p>Description of B95 VPW Valve Control _ Prepaid Ultrasonic Water Meter.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+     <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h5>Quick Links</h5>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="products.html">Products</a>
+                <a href="Solutions.html">Solutions</a>
+                <a href="contact.html">Contact</a>
+                <a href="case study.html">Case Study</a>
+            </div>
+            <!-- Updated footer column in HTML -->
+            <div class="footer-column">
+                <h5>Contact Us</h5>
+                <p class="location">Location: Astrol Office park, Kiambu road</p>
+                <a class="contacts" href="tel:+254720491455" target="_blank">
+                    <img src="images/white_phone-removebg-preview.png" alt=""
+                        style="width: 20px; height: 20px; margin-right: 5px;"> +254720491455
+                </a>
+                <a class="contacts" href="mailto:sales@majinet.com" target="_blank">
+                    <img src="images/white_email-removebg-preview.png" alt=""
+                        style="width: 20px; height: 20px; margin-right: 5px;"> sales@majinet.com
+                </a>
+            </div>
+
+            <div class="footer-logo">
+                <img src="images/majinet logo no bg.png" alt="Footer Logo">
+            </div>
+        </div>
+        <p>All rights reserved. <br> &copy; Majinet 2024. </p>
+    </footer>
+
+
+
+</body>
+</html>

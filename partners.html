@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <!-- Add any additional meta tags or stylesheets here -->
+    <style>
+        /* Add your custom styles here */
+        body {
+            margin: 1.5vw;
+        }
+
+
+
+        .company-logo img {
+            max-height: 3vw;
+            max-width: 100%;
+        }
+
+        .partners-title {
+            text-align: center;
+        }
+
+        .partners-title h3 {
+            margin: 0;
+        }
+
+        .subject-cards {
+            background: #fff;
+            padding: 1.5vw;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -0.75vw; /* Negative margin to counteract the margin on individual items */
+        }
+
+        .discovery-card {
+            flex: 1;
+            margin: 0.75vw; /* Margin between items */
+            max-width: calc(25% - 1.5vw); /* Four items in a row with 0.75vw margin between */
+            text-align: center;
+        }
+
+        .discovery-card .d-card-hero {
+            height: 8vw;
+            background-color: #fff;
+            margin-right: 1.5vw; /* Shift images 1.5vw to the right */
+        }
+
+        .discovery-card .d-card-hero img {
+            height: 100%;
+            object-fit: contain;
+        }
+
+        @media (max-width: 768px) {
+            .discovery-card {
+                max-width: calc(50% - 1.5vw); /* Two items in a row on smaller screens */
+            }
+        }
+
+        body {
+            font-family: 'Your Fancy Font', sans-serif;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 1.8vw;
+            color: #163057;
+            letter-spacing: 0.15vw;
+            margin-top: 1.5vw;
+        }
+
+        main {
+            background-color: #163057;
+            margin-left: 2.25vw;
+            margin-right: 1.5vw;
+        }
+
+        .image-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 1.5vw;
+        }
+
+        .image-section a {
+            flex-basis: calc(16.66% - 0.75vw); /* Each image takes up one-sixth of the space with 0.75vw margin between */
+            margin-bottom: 1.5vw;
+        }
+
+        .image-section a img {
+            max-width: 100%;
+            height: auto;
+            max-height: 5vw;
+        }
+
+        .image-section a:last-child img {
+            margin-left: 0; /* Adjust margin for the last image to align properly */
+        }
+
+
+
+
+
+
+ .top-panel img {
+            width: 8vw;
+            height: auto;
+        }
+
+       .top-panel {
+            background-color: white;
+            padding: 1.5%;
+            display: flex;
+            justify-content: space-left;
+            align-items: left;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 1.5%;
+            align-items: center; /* Align the navigation links vertically centered */
+        }
+
+        nav ul li {
+            margin-right: 10%;
+            position: relative;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            padding: 0.5vw 1vw;
+            font-size: 1.6vw; /* Adjusted font size */
+        }
+
+
+
+        .button {
+            background-color: white; /* Changed background color to white */
+            border: 1px solid #ff0000; /* Adjusted border thickness */
+        }
+
+        .button a {
+            color: #ff0000;
+            text-decoration: none;
+            border-radius: 0;
+            display: flex;
+            white-space: wrap;
+            font-size: 1.6vw; /* Adjusted font size */
+        }
+
+        .button a:hover {
+            background-color: #cc0000;
+            color: #fff;
+        }
+
+
+footer {
+            background-color: #172645;
+            color: #fff;
+            padding: 2%;
+            text-align: center;
+            font-size: 1.4vw;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1vw;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+.footer-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2%;
+        }
+
+        .footer-column {
+            flex: 1;
+            text-align: left;
+            padding: 0 2%;
+        }
+
+        .footer-column h5 {
+            color: #fff;
+            font-size: 1.8vw;
+            margin-bottom: 1.5%;
+            border-bottom: 1px solid #fff;
+            padding-bottom: 1.5%;
+        }
+
+        .footer-column a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            margin: 1.5% 0;
+        }
+
+        .footer-column a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-column p {
+            color: #fff;
+            font-size: 1.4vw;
+            margin: 2% 0;
+        }
+
+        .footer-column.location {
+            font-size: 1.4vw;
+        }
+
+        .footer-logo {
+            flex: 1;
+            text-align: center;
+        }
+
+        .footer-logo img {
+            width: 12vw;
+            height: auto;
+        }
+
+
+
+
+
+
+
+
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+
+<div class="top-panel">
+        <a href="index.html"><img src="images/majinet logo.png" alt="Logo"></a>
+        <nav style="margin-left:%">
+            <ul>
+                <li style="font-size: 1.6vw;"><a href="products.html">Products</a></li>
+                <li style="font-size: 1.6vw;"><a href="Solutions.html">Solutions</a></li>
+                <li style="font-size: 1.6vw;"><a href="partners.html">Partners</a></li>
+                <li style="font-size: 1.6vw;white-space: nowrap;"><a href="case study.html">Case Study</a></li>
+                <li style="font-size: 1.6vw;"><a href="about.html">About</a></li>
+                <li style="font-size: 1.6vw;"><a href="contact.html">Contact</a></li>
+                <li class="button"><a href="portal.html">Majinet System Portal</a></li>
+            </ul>
+        </nav>
+    </div>
+
+     <!-- Explore -->
+        <div class="subject-cards">
+            <div class="container mw-lg pr-0">
+                <div class="card-list-tabs">
+                    <div id="displayed-results" role="tabpanel">
+                        <div class="card-container">
+                            <!-- Reason: Profitability -->
+                            <div class="discovery-card static-card-spacing">
+                                <a class="discovery-card-link bg-white text-black">
+                                    <div class="d-flex flex-column d-card-wrapper">
+                                        <!-- Image -->
+                                        <div class="d-card-hero">
+                                            <img style="margin-left: -10%;" class="optanon-category-C0002-C0003-C0004 lazy d-card-hero-image entered exited"
+                                                src="https://www.bovetech.com/upload/big/1__1545987985.png">
+                                        </div>
+                                        <!-- Image -->
+                                        <div class="d-card-body pl-2 pt-2">
+                                            <h4 class="mb-0">Profitability</h4>
+                                            <p>Get profits from selling leading Metering devices, innovative solutions, as well
+                                                as enough price room and better commercial</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Reason: Profitability -->
+
+                            <!-- Repeat the structure for other reasons -->
+
+                            <!-- Reason: Market Protection -->
+                            <div class="discovery-card static-card-spacing">
+                                <a class="discovery-card-link bg-white text-black">
+                                    <div class="d-flex flex-column d-card-wrapper">
+                                        <!-- Image -->
+                                        <div class="d-card-hero">
+                                            <img style="margin-left: -10%;" class="optanon-category-C0002-C0003-C0004 lazy d-card-hero-image entered exited"
+                                                src="https://www.bovetech.com/upload/big/1__1545988004.png">
+                                        </div>
+                                        <!-- Image -->
+                                        <div class="d-card-body pl-2 pt-2">
+                                            <h4 class="mb-0">Market Protection</h4>
+                                            <p>Offer Regional Exclusive or Partial Regional Exclusive market partnership on
+                                                all products or certain products/</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Reason: Market Protection -->
+
+                            <!-- Reason: Talent Development -->
+                            <div class="discovery-card static-card-spacing">
+                                <a class="discovery-card-link bg-white text-black">
+                                    <div class="d-flex flex-column d-card-wrapper">
+                                        <!-- Image -->
+                                        <div class="d-card-hero">
+                                            <img style="margin-left: -10%;" class="optanon-category-C0002-C0003-C0004 lazy d-card-hero-image entered exited"
+                                                src="https://www.bovetech.com/upload/big/1__11545988035.png">
+                                        </div>
+                                        <!-- Image -->
+                                        <div class="d-card-body pl-2 pt-2">
+                                            <h4 class="mb-0">Talent Development</h4>
+                                            <p>Provide support in the Engineers’ technical capability, Leading to Sales,
+                                                Partner Specialization, and Certificate for Engineers.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Reason: Talent Development -->
+
+                            <!-- Reason: Business Alignment -->
+                            <div class="discovery-card static-card-spacing">
+                                <a class="discovery-card-link bg-white text-black">
+                                    <div class="d-flex flex-column d-card-wrapper">
+                                        <!-- Image -->
+                                        <div class="d-card-hero">
+                                            <img style="margin-left: -10%;" class="optanon-category-C0002-C0003-C0004 lazy d-card-hero-image entered exited"
+                                                src="https://www.bovetech.com/upload/big/1__11545988062.png">
+                                        </div>
+                                        <!-- Image -->
+                                        <div class="d-card-body pl-2 pt-2">
+                                            <h4 class="mb-0">Business Alignment</h4>
+                                            <p>Provide a variety of partners in the related business area and joint business
+                                                plans for partners to achieve business success.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Reason: Business Alignment -->
+
+                            <!-- Reason: Reference of Projects -->
+                            <div class="discovery-card static-card-spacing">
+                                <a class="discovery-card-link bg-white text-black">
+                                    <div class="d-flex flex-column d-card-wrapper">
+                                        <!-- Image -->
+                                        <div class="d-card-hero">
+                                            <img style="margin-left: -10%;" class="optanon-category-C0002-C0003-C0004 lazy d-card-hero-image entered exited"
+                                                src="https://www.bovetech.com/upload/big/1__11545988062.png">
+                                        </div>
+                                        <!-- Image -->
+                                        <div class="d-card-body pl-2 pt-2">
+                                            <h4 class="mb-0">Reference of Projects</h4>
+                                            <p>Get reference from other related similar projects in and around the countries
+                                                to get more knowledge and experience in setting up similar projects in the
+                                                region.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Reason: Reference of Projects -->
+
+                            <!-- Reason: Local Manufacturing -->
+                            <div class="discovery-card static-card-spacing">
+                                <a class="discovery-card-link bg-white text-black">
+                                    <div class="d-flex flex-column d-card-wrapper">
+                                        <!-- Image -->
+                                        <div class="d-card-hero">
+                                            <img style="margin-left: -10%;" class="optanon-category-C0002-C0003-C0004 lazy d-card-hero-image entered exited"
+                                                src="https://www.bovetech.com/upload/big/1__11545988114.png">
+                                        </div>
+                                        <!-- Image -->
+                                        <div class="d-card-body pl-2 pt-2">
+                                            <h4 class="mb-0">Local Manufacturing</h4>
+                                            <p>Get solid technical support on local assembly and manufacturing to lower the
+                                                import duty, or comply with government legislation.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Reason: Local Manufacturing -->
+
+                            <!-- Reason: Resource Sharing -->
+                            <div class="discovery-card static-card-spacing">
+                                <a class="discovery-card-link bg-white text-black">
+                                    <div class="d-flex flex-column d-card-wrapper">
+                                        <!-- Image -->
+                                        <div class="d-card-hero">
+                                            <img style="margin-left: -10%;" class="optanon-category-C0002-C0003-C0004 lazy d-card-hero-image entered exited"
+                                                src="https://www.bovetech.com/upload/big/1__11545988114.png">
+                                        </div>
+                                        <!-- Image -->
+                                        <div class="d-card-body pl-2 pt-2">
+                                            <h4 class="mb-0">Resource Sharing</h4>
+                                            <p>Partners can get resources on supply chain, certification, knowledge know-how,
+                                                and raw material price sharing to simplify their assembly/production plan.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Reason: Resource Sharing -->
+
+                            <!-- Reason: Higher Priority Delivery -->
+                            <div class="discovery-card static-card-spacing">
+                                <a class="discovery-card-link bg-white text-black">
+                                    <div class="d-flex flex-column d-card-wrapper">
+                                        <!-- Image -->
+                                        <div class="d-card-hero">
+                                            <img style="margin-left: -10%;" class="optanon-category-C0002-C0003-C0004 lazy d-card-hero-image entered exited"
+                                                src="https://www.bovetech.com/upload/big/1__11545988114.png">
+                                        </div>
+                                        <!-- Image -->
+                                        <div class="d-card-body pl-2 pt-2">
+                                            <h4 class="mb-0">Higher Priority Delivery</h4>
+                                            <p>Get high priority delivery for all the items required for the projects from
+                                                us.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Reason: Higher Priority Delivery -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <h3 style="color:#003366" > Our partners include:</h3>
+    <!-- Images for Partners -->
+    <div class="image-section">
+        <a href="https://liquid.tech/" target="_blank"><img src="images/liquid.png" alt="Image 1"></a>
+        <a href="https://www.shengdawatermeter.com/?gad_source=1&gclid=Cj0KCQiA2KitBhCIARIsAPPMEhK0EpBMWw6Hxi8iKO2en1WJdwfKKBm_kQSuTWkwac_BzrlqoS1jzaYaAm5rEALw_wcB"
+            target="_blank"><img src="images/shengda.png" alt="Image 2"></a>
+        <a href="https://www.netpaq.co.ke/" target="_blank"><img src="images/netpaq.png" alt="Image 3"></a>
+        <a href="https://www.safaricom.co.ke/" target="_blank"><img src="images/safcom.png" alt="Image 4"></a>
+        <a href="https://www.bovetech.com/allproducts.php?gad_source=1&gclid=Cj0KCQiA2KitBhCIARIsAPPMEhLFLDpzRGfZtXGoR-IEwGax6DpoMsp1dLu7hZY-xSJezmZRMT3itUUaAv6DEALw_wcB"
+            target="_blank"><img src="images/bove.png" alt="Image 5"></a>
+        <a href="https://lomogantech.co.ke/" target="_blank"><img src="images/lomogan majinet.png" alt="Image 6"
+                style="margin-left: -10%;"></a>
+    </div>
+
+
+ <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h5>Quick Links</h5>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="products.html">Products</a>
+                <a href="Solutions.html">Solutions</a>
+                <a href="contact.html">Contact</a>
+                <a href="case study.html">Case Study</a>
+            </div>
+            <div class="footer-column">
+                <h5>Contact Us</h5>
+                <p class="location">Location: Astrol Office park, Kiambu road</p>
+                <a class="contacts" href="tel:+254720491455" target="_blank">
+                    <img src="images/white_phone-removebg-preview.png" alt=""
+                        style="width: 20px; height: 20px; margin-right: 5px;"> +254720491455
+                </a>
+                <a class="contacts" href="mailto:sales@majinet.com" target="_blank">
+                    <img src="images/white_email-removebg-preview.png" alt=""
+                        style="width: 20px; height: 20px; margin-right: 5px;"> sales@majinet.com
+                </a>
+            </div>
+            <div class="footer-logo">
+                <img src="images/majinet logo no bg.png" alt="Footer Logo">
+            </div>
+        </div>
+        <p>All rights reserved. <br> &copy; Majinet 2024. </p>
+    </footer>
+
+
+
+</body>
+
+</html>

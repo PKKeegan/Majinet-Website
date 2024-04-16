@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: white; /* White background */
+            overflow: hidden;
+            position: relative;
+        }
+
+        .company-header {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background-color: white; /* White header */
+            text-align: center;
+            padding: 0vw;
+            box-sizing: border-box;
+        }
+
+        .company-logo {
+            margin-bottom: 0vw;
+            max-width: 100%;
+            height: auto;
+            margin-top: -1vw;
+        }
+
+        .company-paragraph {
+            background-color: white; /* White background for paragraph */
+            border-radius: 0 0 2vw 2vw;
+            padding: 2vw;
+            box-sizing: border-box;
+            text-align: center;
+            margin-top: -2vw;
+            color: #2c3e50; /* Midnight blue text color */
+        }
+
+        .login-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 100%;
+            padding: 2vw;
+            box-sizing: border-box;
+            z-index: 1;
+            margin-top: 33vh; /* Default margin-top for larger screens */
+        }
+
+        .login-form {
+            flex: 1;
+            width: 30%;
+            background-color: #2c3e50; /* Midnight blue form background */
+            border-radius: 1vw; /* Adjusted border-radius */
+            box-shadow: 0 0 1.5vw rgba(0, 0, 0, 0.1); /* Adjusted box-shadow */
+            padding: 1.5vw; /* Adjusted padding */
+            box-sizing: border-box;
+            text-align: center;
+            margin: 1vw;
+            display: block; /* Show all forms by default */
+        }
+
+        /* Hide forms on mobile screens */
+        @media (max-width: 767px) {
+            .login-form:not(:nth-child(2)) {
+                display: none;
+            }
+        }
+
+        .login-form h2 {
+            margin-bottom: 1.5vw; /* Adjusted margin-bottom */
+            color: white; /* White text */
+        }
+
+        .login-form input {
+            width: calc(100% - 3vw); /* Adjusted width */
+            padding: 1.8vw; /* Adjusted padding */
+            margin-bottom: 0.9vw; /* Adjusted margin-bottom */
+            box-sizing: border-box;
+            border: 0.1vw solid #ddd;
+            border-radius: 1vw; /* Adjusted border-radius */
+            outline: none;
+            position: relative;
+        }
+
+        .password-input {
+            position: relative;
+        }
+
+        .password-toggle {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 1.5vw; /* Adjusted right margin */
+            cursor: pointer;
+            color: #e67e22; /* Orange color for the show/hide button */
+            font-size: 1vw; /* Adjusted font size */
+        }
+
+        .login-form button {
+            width: 100%;
+            padding: 1.8vw; /* Adjusted padding */
+            background-color: #e67e22; /* Orange login button */
+            color: white; /* White text */
+            border: none;
+            border-radius: 1vw; /* Adjusted border-radius */
+            cursor: pointer;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="company-header">
+        <div style="margin-top: 2vw" class="company-logo">
+            <a href="index.html"><img src="images/portal logo.png" alt="Company Logo" width="30%" length="auto"></a>
+        </div>
+        <div class="company-paragraph">
+            <h2>Majinet Water Meter Remote Reading System</h2>
+            <p style="margin-left: 5vw;margin-right: 5vw">Welcome to Majinet System Portal. The Portal gives you readings of your water consumption. If you are a resident/homeowner, please log in the Resident/Homeowner page - you will need to self-register
+                <br> <br> Click on the Majinet logo to go back to the home page!</p>
+        </div>
+    </div>
+
+    <div class="login-container">
+        <div class="login-form">
+            <h2>Estate manager</h2>
+            <form action="#" method="post">
+                <input type="text" name="username" placeholder="Username">
+                <div class="password-input">
+                    <input type="password" name="password" id="password1" placeholder="Password">
+                    <span class="password-toggle" onclick="togglePassword('password1')">Show</span>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <div class="login-form">
+            <h2>Tenant</h2>
+            <form action="#" method="post">
+                <input type="text" name="username" placeholder="Username">
+                <div class="password-input">
+                    <input type="password" name="password" id="password2" placeholder="Password">
+                    <span class="password-toggle" onclick="togglePassword('password2')">Show</span>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <div class="login-form">
+            <h2>Owner</h2>
+            <form action="#" method="post">
+                <input type="text" name="username" placeholder="Username">
+                <div class="password-input">
+                    <input type="password" name="password" id="password3" placeholder="Password">
+                    <span class="password-toggle" onclick="togglePassword('password3')">Show</span>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function togglePassword(passwordFieldId) {
+            var passwordField = document.getElementById(passwordFieldId);
+            var passwordToggle = document.querySelector("#" + passwordFieldId + " + .password-toggle");
+
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                passwordToggle.textContent = "Hide";
+            } else {
+                passwordField.type = "password";
+                passwordToggle.textContent = "Show";
+            }
+        }
+    </script>
+</body>
+</html>

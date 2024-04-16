@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: white; /* White background for body */
+    color: #003366; /* Midnight Blue text color */
+}
+
+.duplicate-container {
+    display: flex;
+}
+
+.duplicate-counter {
+    margin-right: 20px;
+}
+
+.counter-container {
+    font-size: 1em;
+    text-align: center;
+    background-color: #003366; /* Midnight Blue */
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    height: 45px;
+    width: 80px;
+}
+
+.counter {
+    padding: 5px;
+    border: 2px solid #001a33; /* Slightly darker shade */
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.text-box {
+    margin-bottom: 5px;
+    text-align: center;
+}
